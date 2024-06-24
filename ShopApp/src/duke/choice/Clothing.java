@@ -47,4 +47,7 @@ public class Clothing {
         this.description="";
         this.precio=0;
     }
+
+    public String toString(){
+        return ;
 }
