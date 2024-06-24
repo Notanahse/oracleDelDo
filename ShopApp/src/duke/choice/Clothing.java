@@ -41,13 +41,12 @@ public class Clothing {
         this.size = size;
     }
 
-
-
     public Clothing() {
         this.description="";
         this.precio=0;
     }
 
+    @Override
     public String toString(){
-        return ;
+        return System.out.println("Items "+);
 }
