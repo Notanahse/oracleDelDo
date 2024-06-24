@@ -1,4 +1,5 @@
 package duke.choice;
+import java.util.Arrays;
 
 public class ShopApp {
     public static void main(String[] args) {
@@ -8,10 +9,10 @@ public class ShopApp {
         System.out.println("Welcome to Duke Choice Shop!");
         Customer c1=new Customer("Pinky",3);
 
-
+        System.out.println("Min Price "+ Clothing.MIN_Precio);
 
         Clothing item1=new Clothing("Blue Jacket",20.9,"M");
-        Clothing item2=new Clothing("Orange T-Shirt",10.5,"S");
+        Clothing item2=new Clothing("Orange T-Shirt",10.5,"S"e);
         Clothing item3=new Clothing("Green Scarf",5,"S");
         Clothing item4=new Clothing("Blue T-Shirt",10.5,"S");
 
@@ -33,9 +34,15 @@ public class ShopApp {
 
 
         for (Clothing item:items){
-                System.out.println("Item: " + item.getDescription()+", "+item.getPrecio()+", "+item.getSize());
+                //System.out.println("Item: " + item.getDescription()+", "+item.getPrecio()+", "+item.getSize());
+            System.out.println("Item output "+ item);
         }
         //System.out.println("El total es: "+ c1.getTotalClothingCost());
         System.out.println("Customer is: " + c1.getName()+" ,"+c1.getSize()+", " + c1.getTotalClothingCost());
+        Arrays.sort(c1.getItems());
+       for (Clothing item:items){
+                //System.out.println("Item: " + item.getDescription()+", "+item.getPrecio()+", "+item.getSize());
+            System.out.println("Item output "+ item);
+        }
     }
 }
