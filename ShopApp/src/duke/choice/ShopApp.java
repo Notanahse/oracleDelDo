@@ -29,9 +29,24 @@ public class ShopApp {
         c1.setSize(mesurement);
         System.out.println("Customer is: " + c1.getName()+" ,"+c1.getSize());
 
+
+        int average = 0;
+        int count =0;
+
+        for(Clothing item: c1.getItems){
+            if(item.getSize().equals("L"))
+            count ++;
+            average+=item.getPrice();
+            }
+        }
+        try{
+        average=(count ==0)?0:average/count;
+        average=average/count;
+        System.out.println("Precio promedio " + average, "Cantidad "+ count);
+        }catch(ArimeticException e){
+            System.out.println("No divida por cero")    
+        }    
         c1.addItems(items);
-
-
 
         for (Clothing item:items){
                 //System.out.println("Item: " + item.getDescription()+", "+item.getPrecio()+", "+item.getSize());
